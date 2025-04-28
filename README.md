@@ -1,2 +1,2 @@
 # workflow-tutorial
-This is a github actions tutorial.
+This is a github actions tutorial
