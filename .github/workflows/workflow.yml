@@ -1,6 +1,9 @@
 name: PR-Greeting
 on: [pull_request_target]
 
+permissions:
+  pull-requests: write
+
 jobs:
   greet:
     runs-on: ubuntu-latest
