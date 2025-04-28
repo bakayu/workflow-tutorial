@@ -1,15 +1,12 @@
-name: Post-Message-On-New-PR
-
-on:
-  pull_request:
-    types: [opened]
+name: PR-Greeting
+on: [pull_request]
 
 jobs:
   greet:
     runs-on: ubuntu-latest
     steps:
-      - name: Post Message
-        uses: actions/first-interaction@v1
+      - name: Post PR message
+        uses: thollander/actions-comment-pull-request@v1
         with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          pr-message: "PR raised."
+          message: "PR Raised"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
